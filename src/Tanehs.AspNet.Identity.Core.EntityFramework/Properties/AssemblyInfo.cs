@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Tanehs.AspNet.Identity.EntityFramework.MSSQL")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Tanehs.AspNet.Identity.Core.EntityFramework")]
+[assembly: AssemblyDescription("AspNet Identity Core Library For EntityFramework Supported Databases")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Tanehs.AspNet.Identity.EntityFramework.MSSQL")]
+[assembly: AssemblyCompany("Tanehs Inc.")]
+[assembly: AssemblyProduct("Tanehs.AspNet.Identity.Core.EntityFramework")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -17,6 +17,7 @@ using System.Linq;
 
 namespace Microsoft.AspNet.Identity.EntityFramework
 {
+     
     /// <summary>
     /// Default IdentityDbContext that uses the default entity types for ASP.NET Identity Users, Roles, Claims, Logins. 
     /// Use this overload to add your own entity types.
@@ -98,7 +99,7 @@ namespace Microsoft.AspNet.Identity.EntityFramework
         {
         }
     }
-
+     
     /// <summary>
     ///     DbContext which uses a custom user entity with a string primary key
     /// </summary>
@@ -245,7 +246,7 @@ namespace Microsoft.AspNet.Identity.EntityFramework
             return columns.All(tableColumns.Contains);
         }
     }
-
+    
     /// <summary>
     /// Generic IdentityDbContext base that can be customized with entity types that extend from the base IdentityUserXXX types.
     /// </summary>
@@ -441,4 +442,5 @@ namespace Microsoft.AspNet.Identity.EntityFramework
             return base.ValidateEntity(entityEntry, items);
         }
     }
+ 
 }

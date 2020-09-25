@@ -40,7 +40,7 @@ namespace Microsoft.AspNet.Identity.EntityFramework
         {
         }
     }
-
+    
     /// <summary>
     ///     EntityFramework based user store implementation that supports IUserStore, IUserLoginStore, IUserClaimStore and
     ///     IUserRoleStore
@@ -1013,4 +1013,6 @@ namespace Microsoft.AspNet.Identity.EntityFramework
             }
         }
     }
+   
+    
 }
