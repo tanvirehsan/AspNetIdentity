@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessLayer\ApplicationDbContext.cs" />
+    <Compile Include="DataAccessLayer\ApplicationDbInitializer.cs" />
     <Compile Include="Enum\Status.cs" />
     <Compile Include="Models\ICommon.cs" />
     <Compile Include="Models\Role.cs" />

@@ -8,13 +8,20 @@
 
     public class ApplicationDbContext : IdentityDbContext<User>
     {
+        
+        private static void InitializeDatabase()
+        { 
+            Database.SetInitializer(new ApplicationDbInitializer());
+        }
+        
         public ApplicationDbContext(string nameOrConnectionString= "DefaultConnection") : base(nameOrConnectionString, throwIfV1Schema: false)
         {
-
+            InitializeDatabase();
         }
 
         public static ApplicationDbContext Create()
         {
+           
             return new ApplicationDbContext();
         }
 
@@ -36,11 +43,11 @@
 
             #region Renaming The Identiy Tables 
             // Change the name of Default Tables Created by Identity Entity Framework   
-            modelBuilder.Entity<User>().ToTable("User").Property(x=>x.Id).HasColumnName("UserID");            
-            modelBuilder.Entity<UserRole>().ToTable("UserRole");
-            modelBuilder.Entity<UserLogin>().ToTable("UserLogin");
-            modelBuilder.Entity<UserClaim>().ToTable("UserClaim").Property(x => x.Id).HasColumnName("UserClaimID");
-            modelBuilder.Entity<Role>().ToTable("Role").Property(x => x.Id).HasColumnName("RoleID");
+            modelBuilder.Entity<User>().ToTable("User").Property(x=>x.Id).HasColumnName("UserID"); 
+            modelBuilder.Entity<IdentityUserRole>().ToTable("UserRole"); 
+            modelBuilder.Entity<IdentityUserLogin>().ToTable("UserLogin");
+            modelBuilder.Entity<IdentityUserClaim>().ToTable("UserClaim").Property(x => x.Id).HasColumnName("UserClaimID");
+            modelBuilder.Entity<IdentityRole>().ToTable("Roles").Property(x => x.Id).HasColumnName("RoleID");
 
             #endregion
         }
