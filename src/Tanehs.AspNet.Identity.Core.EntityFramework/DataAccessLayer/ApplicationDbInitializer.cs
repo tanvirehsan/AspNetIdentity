@@ -1,13 +1,19 @@
 ﻿namespace Tanehs.AspNet.Identity.Core.EntityFramework.DataAccessLayer
 {
     using System.Data.Entity;
-    // This is useful if you do not want to tear down the database each time you run the application.
-    // public class ApplicationDbInitializer : DropCreateDatabaseAlways<ApplicationDbContext>
-    // This example shows you how to create a new database if the Model changes
-    public class ApplicationDbInitializer :   DropCreateDatabaseIfModelChanges<ApplicationDbContext>
+    //Use DropCreateDatabaseIfModelChanges<ApplicationDbContext> when Code Migration is Disabled
+    //Use CreateDatabaseIfNotExists<ApplicationDbContext> when you will add your own seed method 
+    public class ApplicationDbInitializer : DropCreateDatabaseIfModelChanges<ApplicationDbContext>
     {
         protected override void Seed(ApplicationDbContext context)
         { 
+            //Add Here Custom Code for initialization of the database for first time creation
+            //------------------Custom Initialization Code for your Database While Creating for the First Time
+
+
+
+
+            //------------------------------------------
             base.Seed(context);
         }
     }
